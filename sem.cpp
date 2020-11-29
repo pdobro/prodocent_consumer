@@ -12,12 +12,12 @@ Semaphore::Semaphore(int beg) {
 
 void Semaphore::p(){
     if (sem_wait(&semaphore))
-        throw "wait e";
+        throw;
 }
 
 void Semaphore::v() {
     if(sem_post(&semaphore))
-        throw "signal e";
+        throw ;
 }
 
 int Semaphore::value() {

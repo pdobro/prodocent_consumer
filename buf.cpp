@@ -25,13 +25,13 @@ void Buffer::print() const {
 void Buffer::push() {
     val++;
     if (val > N)
-        std::cout<<"bufer przepełniony!";
+        std::cout<<"\nbufor przepełiony!";
 
 }
 
 void Buffer::pull() {
     val--;
     if (val < 0)
-        std::cout<<"zabranie z pustego buforu!";
+        std::cout<<"\ndostęp do pustego bufora!";
 }
 

@@ -15,33 +15,33 @@ void runProducerB() {
 void runProducerD() {
     example.produceCabbage();
 }
-void runCosnumerA() {
+void runConsumerA() {
     example.consumeCheese();
 }
 void runConsumerB() {
     example.consumeMeat();
 }
-void runCosnumerC() {
+void runConsumerC() {
     example.consumeCabbage();
 }
 int main() {
-    pthread_t  producentA, producentB, producentC, producentD, cosumerA, consumerB, consumerC;
+    pthread_t  producentA, producentB, producentC, producentD, consumerA, consumerB, consumerC;
 
-    pthread_create(&producentA, NULL, reinterpret_cast<void *(*)(void *)>(runProducerA), NULL);
-    pthread_create(&producentB, NULL, reinterpret_cast<void *(*)(void *)>(runProducerB), NULL);
-    pthread_create(&producentC, NULL, reinterpret_cast<void *(*)(void *)>(runProducerC), NULL);
-    pthread_create(&producentD, NULL, reinterpret_cast<void *(*)(void *)>(runProducerD), NULL);
-    pthread_create(&cosumerA, NULL, reinterpret_cast<void *(*)(void *)>(runCosnumerA), NULL);
-    pthread_create(&consumerB, NULL, reinterpret_cast<void *(*)(void *)>(runConsumerB), NULL);
-    pthread_create(&consumerC, NULL, reinterpret_cast<void *(*)(void *)>(runCosnumerC), NULL);
+    pthread_create(&producentA, nullptr, reinterpret_cast<void *(*)(void *)>(runProducerA), nullptr);
+    pthread_create(&producentB, nullptr, reinterpret_cast<void *(*)(void *)>(runProducerB), nullptr);
+    pthread_create(&producentC, nullptr, reinterpret_cast<void *(*)(void *)>(runProducerC), nullptr);
+    pthread_create(&producentD, nullptr, reinterpret_cast<void *(*)(void *)>(runProducerD), nullptr);
+    pthread_create(&consumerA, nullptr, reinterpret_cast<void *(*)(void *)>(runConsumerA), nullptr);
+    pthread_create(&consumerB, nullptr, reinterpret_cast<void *(*)(void *)>(runConsumerB), nullptr);
+    pthread_create(&consumerC, nullptr, reinterpret_cast<void *(*)(void *)>(runConsumerC), nullptr);
 
-    pthread_join(producentA, NULL);
-    pthread_join(producentB, NULL);
-    pthread_join(producentC, NULL);
-    pthread_join(producentD, NULL);
-    pthread_join(cosumerA, NULL);
-    pthread_join(consumerB, NULL);
-    pthread_join(consumerC, NULL);
+    pthread_join(producentA, nullptr);
+    pthread_join(producentB, nullptr);
+    pthread_join(producentC, nullptr);
+    pthread_join(producentD, nullptr);
+    pthread_join(consumerA, nullptr);
+    pthread_join(consumerB, nullptr);
+    pthread_join(consumerC, nullptr);
 
     return 0;
 }

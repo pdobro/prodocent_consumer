@@ -27,7 +27,7 @@
         buffer_dough.print();
         cout_mutex.unlock();
 
-        usleep(330000);
+        usleep(300000);
     }
 }
 
@@ -46,7 +46,7 @@ while (true) {
     std::cout<<"ser: ";
     buffer_cheese.print();
     cout_mutex.unlock();
-    usleep(1000000);
+    usleep(900000);
 
 }
 }
@@ -66,7 +66,7 @@ while (true) {
         std::cout<<"mieso: ";
         buffer_meat.print();
         cout_mutex.unlock();
-        usleep(1000000);
+        usleep(900000);
     }
     }
 
@@ -86,7 +86,7 @@ while (true) {
         std::cout<<"kapusta: ";
         buffer_cabbage.print();
         cout_mutex.unlock();
-        usleep(1000000);
+        usleep(900000);
     }
     }
 
@@ -115,9 +115,9 @@ while (true) {
 
         pthread_mutex_unlock(&mutexConsumerCheese);
         cout_mutex.lock();
-        std::cout<<"wyprodukowano ser\n";
+        std::cout<<"wyprodukowano pierogi z serem\n";
         cout_mutex.unlock();
-        usleep(1000000);
+        usleep(900000);
     }
 
     }
@@ -147,7 +147,7 @@ while (true) {
 
         pthread_mutex_unlock(&mutexConsumerMeat);
         cout_mutex.lock();
-        std::cout<<"wyprodukowano mieso\n";
+        std::cout<<"wyprodukowano pierogi z miesem\n";
         cout_mutex.unlock();
         usleep(1000000);
     }
@@ -178,7 +178,7 @@ while (true) {
 
         pthread_mutex_unlock(&mutexConsumerCabbage);
         cout_mutex.lock();
-        std::cout<<"wyprodukowano kapuste\n";
+        std::cout<<"wyprodukowano pierogi z kapusta\n";
         cout_mutex.unlock();
         usleep(1000000);
     }
